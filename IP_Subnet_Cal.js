@@ -1,7 +1,7 @@
 window.onload = function() {
   var IP_Addr = document.getElementById("IP_Address");
   IP_Addr.addEventListener("input", function(event) {
-    var ip = "(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))";
+    var ip = "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
     if ((IP_Addr.value).match(ip)) {
       IP_Addr.setCustomValidity("");
     } else {
