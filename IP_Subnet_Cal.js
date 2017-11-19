@@ -1,10 +1,11 @@
 window.onload = function() {
   var IP_Addr = document.getElementById("IP_Address");
+  // var ip = "/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/";
   IP_Addr.addEventListener("input", function(event) {
-    if (IP_Addr.validity.PatternMismatch) {
-      IP_Addr.setCustomValidity("");
-    } else {
+    if(IP_Addr.validity.patternMismatch) {
       IP_Addr.setCustomValidity("Please enter a valid IP Address");
+    } else {
+      IP_Addr.setCustomValidity("");
     }
   });
 }
