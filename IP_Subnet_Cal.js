@@ -1,8 +1,7 @@
 window.onload = function() {
   var IP_Addr = document.getElementById("IP_Address");
   IP_Addr.addEventListener("input", function(event) {
-    var ip = "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
-    if ((IP_Addr.value).match(ip)) {
+    if (IP_Addr.validity.PatternMismatch) {
       IP_Addr.setCustomValidity("");
     } else {
       IP_Addr.setCustomValidity("Please enter a valid IP Address");
